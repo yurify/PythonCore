@@ -106,9 +106,35 @@ else:
 # (для цього підключаємо модуль random наступним чином 
 # from random import random)
 
+import random
+
+while True:
+    input("Click Enter to generate a number")
+    num = str(random.randrange(100500))
+    print("The computer has generated the following number:", num)
+
+    for elem in range(9, -1, -1):
+        if str(elem) in num:
+            print("The maximum digit is", elem)
+            break
 
 
 # 10.  Визначити чи введене слово паліндром, тобто чи воно читається однаково
 #  зліва направо і навпаки.
 
+while True:
+    st = input("Please enter a word to check ")
 
+    i = -1
+    j = 0
+    
+    while(i + 1 < (len(st)//2)):
+        if st[i + 1] == st[j - 1]:
+            print("I'm checking the letters...", st[i], "and", st[j], "are equal!")
+            i = i + 1
+            j = j - 1
+            if (i + 1 == (len(st)//2)):
+                print("This word is a palindrome!")
+        else:
+            print("It's not a palindrome")
+            break
