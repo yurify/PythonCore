@@ -138,3 +138,15 @@ while True:
         else:
             print("It's not a palindrome")
             break
+
+# 10. Another solution
+
+st = input("Please enter a word ")
+
+rst = ''.join(reversed(st)) # or rst = st[::-1]
+print(rst)
+
+if st == rst:
+    print("Palindrom")
+else:
+    print("Not a palindrom")
